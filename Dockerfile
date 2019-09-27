@@ -1,6 +1,6 @@
 FROM openjdk:11-jre-slim
 
-LABEL version="0.0.1"
+LABEL version="1.2.0"
 LABEL repository="https://github.com/sonarsource/sonarcloud-github-action"
 LABEL homepage="https://github.com/sonarsource/sonarcloud-github-action"
 LABEL maintainer="SonarSource"
@@ -13,9 +13,9 @@ ARG SONAR_SCANNER_HOME=/opt/sonar-scanner
 ARG NODEJS_HOME=/opt/nodejs
 
 ENV SONAR_SCANNER_HOME=${SONAR_SCANNER_HOME} \
-    SONAR_SCANNER_VERSION=3.3.0.1492 \
+    SONAR_SCANNER_VERSION=4.1.0.1829 \
     NODEJS_HOME=${NODEJS_HOME} \
-    NODEJS_VERSION=v8.12.0
+    NODEJS_VERSION=v10.16.3
 
 ENV PATH=${PATH}:${SONAR_SCANNER_HOME}/bin:${NODEJS_HOME}/bin
 
